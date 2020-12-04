@@ -1,19 +1,20 @@
 <?php
 
-include "index.php";
+include "db.php";
 
 $email = $_POST["email"];
-$Wachtwoord = $_POST["Wachtwoord"];
+$password = $_POST["password"];
+
 
 $myConn = new DB;
 
-$query = "SELECT * FROM user WHERE email = '$email'";
+$query = "SELECT * FROM gebruiker WHERE email = '$email'";
 
 $result = $myConn->executeSQL($query);
 
 
 if (!empty($result)) {
-    if ($Wachtwoord == $result['password']) {
+    if ($password == $result['password']) {
         echo "<br> Login is succes <br>";
         echo '<pre>'.print_r($result, true).'</pre>';
     }else{
