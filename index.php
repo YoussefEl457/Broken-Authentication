@@ -6,7 +6,7 @@
         <body>
             <h2>Login</h2>
             <form action="index.php" method="post">
-                <input type="text" title="Gebruikersnaam" placeholder="Gebruikersnaam" required/><br>
+                <input type="text" title="email" placeholder="Email" required/><br>
                 <input type="password" title="Wachtwoord" placeholder="Wachtwoord" required/><br>
                 <button type="submit" class="btn">Login</button><br>
             </form>

@@ -7,3 +7,8 @@ CREATE TABLE gebruiker(
     password VARCHAR(255),
     PRIMARY KEY(ID)
 );
+
+ALTER TABLE user ADD COLUMN(
+	IP_adrress VARCHAR(80),
+	datum DATETIME DEFAULT CURRENT_TIMESTAMP
+);
